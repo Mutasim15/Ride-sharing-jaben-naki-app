@@ -5,7 +5,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#242424] flex items-center justify-center">
+    <div className="min-h-screen bg-[#0F0F1D] flex items-center justify-center">
       <div className="w-full max-w-sm px-6 py-10">
         <img
           src="/src/assets/bookiing-transformed.png"

@@ -10,6 +10,9 @@ import {
 } from "react-router-dom";
 import Home from './Pages/Home';
 import AuthScreen from './Pages/AuthScreen';
+import RoleSelection from './Pages/RoleSelection';
+import PassengerRegistration from './Pages/Passenger/PassengerRegistration';
+import DriverRegistration from './Pages/Driver/DriverRegistration';
 
 
 
@@ -22,6 +25,18 @@ const router = createBrowserRouter([
   {
     path:'auth',
     element:<AuthScreen></AuthScreen>
+  },
+  {
+    path:'/role-selection',
+    element:<RoleSelection></RoleSelection>
+  },
+  {
+    path:'/register/passenger',
+    element:<PassengerRegistration></PassengerRegistration>
+  },
+  {
+    path:'/register/driver',
+    element:<DriverRegistration></DriverRegistration>
   }
 ]);
 

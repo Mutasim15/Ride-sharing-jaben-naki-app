@@ -1,23 +1,25 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const AuthScreen = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-[#0F0F1D] flex items-center justify-center px-4">
       <div className="w-full max-w-sm py-10">
-        {/* Image */}
         <img
-          src="/src/assets/auth-illustration.png" 
-          alt="Welcome Illustration"
+          src="/src/assets/auth-illustration.png"
+          alt="Welcome"
           className="w-full max-h-60 object-contain mb-10"
         />
-
-        {/* Buttons */}
         <div className="flex flex-col space-y-4">
-          <button className="bg-[#7879F1] text-white text-base font-medium py-3 rounded-full w-full shadow-md hover:bg-[#6b6bdc] transition">
+          <button
+            onClick={() => navigate("/role-selection")}
+            className="bg-[#7879F1] text-white py-3 rounded-full shadow-md"
+          >
             Registration
           </button>
-
-          <button className="bg-white text-[#A1A1A1] text-base font-medium py-3 rounded-full w-full shadow-md hover:bg-gray-100 transition">
+          <button className="bg-white text-[#A1A1A1] py-3 rounded-full shadow-md">
             Log In
           </button>
         </div>
