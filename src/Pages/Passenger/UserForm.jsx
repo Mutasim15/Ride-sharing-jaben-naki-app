@@ -17,14 +17,17 @@ const UserForm = ({ data, setData, nextStep }) => {
         required
         className="w-full p-2 rounded bg-white"
         value={data.email}
-        onChange={(e) => setData({ ...data, email: e.target.value })}
+        onChange={(e) => setData({
+          ...data,
+          user: { ...data.user, email: e.target.value }
+        })}
       />
       <input
         placeholder="Username"
         required
         className="w-full p-2 rounded bg-white"
         value={data.userName}
-        onChange={(e) => setData({ ...data, userName: e.target.value })}
+        onChange={(e) => setData({ ...data, user: { ...data.user, userName: e.target.value } })}
       />
       <input
         placeholder="Password"
@@ -32,7 +35,7 @@ const UserForm = ({ data, setData, nextStep }) => {
         type="password"
         className="w-full p-2 rounded bg-white"
         value={data.password}
-        onChange={(e) => setData({ ...data, password: e.target.value })}
+        onChange={(e) => setData({ ...data, user: { ...data.user, password: e.target.value } })}
       />
 
       <button
