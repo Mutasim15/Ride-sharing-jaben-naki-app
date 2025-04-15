@@ -17,13 +17,13 @@ const DriverUserForm = ({ data, setData, nextStep }) => {
   };
 
   return (
-    <form className="space-y-4" onSubmit={handleSubmit}>
-      <h2 className="text-xl font-semibold">User Information</h2>
+    <form className="p-5 space-y-4" onSubmit={handleSubmit}>
+      <h2 className="text-white text-2xl font-poppins font-semibold mb-4">User Information</h2>
 
       <input
         type="email"
         placeholder="Enter your email"
-        className="w-full p-3 rounded bg-white text-black"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.email}
         onChange={(e) => setData({ ...data, email: e.target.value })}
         required
@@ -31,7 +31,7 @@ const DriverUserForm = ({ data, setData, nextStep }) => {
 
       <input
         placeholder="Enter your username"
-        className="w-full p-3 rounded bg-white text-black"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.userName}
         onChange={(e) => setData({ ...data, userName: e.target.value })}
         required
@@ -40,7 +40,7 @@ const DriverUserForm = ({ data, setData, nextStep }) => {
       <input
         type="password"
         placeholder="Enter your password"
-        className="w-full p-3 rounded bg-white text-black"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.password}
         onChange={(e) => setData({ ...data, password: e.target.value })}
         required
@@ -50,7 +50,7 @@ const DriverUserForm = ({ data, setData, nextStep }) => {
 
       <button
         type="submit"
-        className="flex items-center justify-end ml-auto bg-[#7879F1] text-white px-6 py-2 rounded-full"
+        className="flex justify-end ml-53 bg-gray-500 text-white px-6 py-2 rounded-full"
       >
         Next ➡️
       </button>

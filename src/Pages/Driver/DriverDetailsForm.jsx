@@ -18,11 +18,11 @@ const DriverDetailsForm = ({ data, setData, nextStep, previousStep }) => {
 
   return (
     <form className="space-y-4" onSubmit={handleSubmit}>
-      <h2 className="text-xl font-semibold">Driver Details</h2>
+      <h2 className="text-white text-2xl font-poppins font-semibold mb-4">Driver Details</h2>
 
       <input
         placeholder="Enter full name"
-        className="w-full p-3 rounded bg-white text-black"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.driver.name}
         onChange={(e) =>
           setData({ ...data, driver: { ...data.driver, name: e.target.value } })
@@ -32,7 +32,7 @@ const DriverDetailsForm = ({ data, setData, nextStep, previousStep }) => {
 
       <input
         type="date"
-        className="w-full p-3 rounded bg-white text-black"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.driver.dateOfBirth}
         onChange={(e) =>
           setData({ ...data, driver: { ...data.driver, dateOfBirth: e.target.value } })
@@ -42,7 +42,7 @@ const DriverDetailsForm = ({ data, setData, nextStep, previousStep }) => {
 
       <input
         placeholder="Enter contact number"
-        className="w-full p-3 rounded bg-white text-black"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.driver.contactNumber}
         onChange={(e) =>
           setData({ ...data, driver: { ...data.driver, contactNumber: e.target.value } })
@@ -52,7 +52,7 @@ const DriverDetailsForm = ({ data, setData, nextStep, previousStep }) => {
 
       <input
         placeholder="Enter profile image URL"
-        className="w-full p-3 rounded bg-white text-black"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.driver.profileImg}
         onChange={(e) =>
           setData({ ...data, driver: { ...data.driver, profileImg: e.target.value } })
@@ -82,7 +82,7 @@ const DriverDetailsForm = ({ data, setData, nextStep, previousStep }) => {
         </button>
         <button
           type="submit"
-          className="bg-[#7879F1] text-white px-6 py-2 rounded-full"
+          className="bg-gray-500 text-white px-6 py-2 rounded-full"
         >
           Next ➡️
         </button>

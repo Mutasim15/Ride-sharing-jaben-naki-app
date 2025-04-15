@@ -8,7 +8,7 @@ const Home = () => {
     <div className="min-h-screen bg-[#0F0F1D] flex items-center justify-center">
       <div className="w-full max-w-sm px-6 py-10">
         <img
-          src="/src/assets/bookiing-transformed.png"
+          src="/src/assets/CarBook.png"
           alt="Booking Illustration"
           className="w-full h-auto mb-8 object-contain"
         />
@@ -23,7 +23,7 @@ const Home = () => {
 
         <button
           onClick={() => navigate('/auth')}
-          className="bg-[#7879F1] text-white text-base font-medium px-8 py-3 rounded-full w-full shadow-md hover:bg-[#6b6bdc] transition"
+          className="bg-[#474973] text-white text-base font-medium px-8 py-3 rounded-full w-full shadow-md hover:bg-[#2b2b5f] transition"
         >
           Get Started
         </button>

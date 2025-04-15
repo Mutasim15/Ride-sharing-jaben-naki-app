@@ -35,7 +35,7 @@ const PassengerRegistration = () => {
   
   return (
     <div className="min-h-screen bg-[#2d2d2d] flex items-center justify-center">
-      <div className="bg-[#3a3a3a] rounded-2xl p-6 w-full max-w-md shadow-lg">
+      <div className="bg-[#3a3a3a] rounded-2xl p-8 max-w-md w-full shadow-lg flex items-center justify-center">
         {step === 1 ? (
           <UserForm data={data} setData={setData} nextStep={nextStep} />
         ) : (

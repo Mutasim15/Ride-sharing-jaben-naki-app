@@ -52,7 +52,7 @@ const PassengerForm = ({ data, setData, handleSubmit, handlePrevious }) => {
 
   return (
     <div className="p-4 space-y-4">
-      <h2 className="text-white text-2xl font-semibold mb-4">Enter Full Name, Date of Birth and Contact Number</h2>
+      <h2 className="text-white text-2xl font-poppins font-semibold mb-4">Enter Full Name , Date of Birth and Contact Number</h2>
 
       {loading && <div className="text-yellow-300 text-sm text-center">Submitting, please wait...</div>}
 
@@ -60,7 +60,7 @@ const PassengerForm = ({ data, setData, handleSubmit, handlePrevious }) => {
 
       <input
         placeholder="Full Name"
-        className="w-full p-2 rounded bg-white"
+        className="w-[310px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={name}
         onChange={e =>
           setData({
@@ -71,7 +71,7 @@ const PassengerForm = ({ data, setData, handleSubmit, handlePrevious }) => {
       />
       <input
         type="date"
-        className="w-full p-2 rounded bg-white"
+        className="w-[310px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={dateOfBirth}
         onChange={e =>
           setData({
@@ -82,7 +82,7 @@ const PassengerForm = ({ data, setData, handleSubmit, handlePrevious }) => {
       />
       <input
         placeholder="Contact Number"
-        className="w-full p-2 rounded bg-white"
+        className="w-[310px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={contactNumber}
         onChange={e =>
           setData({
@@ -94,7 +94,7 @@ const PassengerForm = ({ data, setData, handleSubmit, handlePrevious }) => {
 
       <div className="flex justify-between mt-4">
         <button onClick={handlePrevious} className="bg-gray-500 text-white px-4 py-2 rounded-full">
-          ← Previous
+        <span>⬅️</span>Previous
         </button>
         <button onClick={handlePassengerSubmit} className="bg-green-500 text-white px-4 py-2 rounded-full" disabled={loading}>
           {loading ? "Signing Up..." : "Sign Up"}

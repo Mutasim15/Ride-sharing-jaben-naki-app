@@ -7,15 +7,16 @@ const UserForm = ({ data, setData, nextStep }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 space-y-4">
-      <h2 className="text-white text-2xl font-semibold mb-4">
+    <form onSubmit={handleSubmit} className="p-5 space-y-4">
+      <h2 className="text-white text-2xl font-poppins font-semibold mb-4">
         Enter User Name, Email and Password to Continue
       </h2>
 
       <input
         placeholder="Email"
         required
-        className="w-full p-2 rounded bg-white"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
+
         value={data.email}
         onChange={(e) => setData({
           ...data,
@@ -25,7 +26,7 @@ const UserForm = ({ data, setData, nextStep }) => {
       <input
         placeholder="Username"
         required
-        className="w-full p-2 rounded bg-white"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.userName}
         onChange={(e) => setData({ ...data, user: { ...data.user, userName: e.target.value } })}
       />
@@ -33,14 +34,14 @@ const UserForm = ({ data, setData, nextStep }) => {
         placeholder="Password"
         required
         type="password"
-        className="w-full p-2 rounded bg-white"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.password}
         onChange={(e) => setData({ ...data, user: { ...data.user, password: e.target.value } })}
       />
 
       <button
         type="submit"
-        className="flex items-center justify-end ml-auto bg-[#7879F1] text-white px-6 py-2 rounded-full"
+        className="flex justify-end ml-55 bg-gray-500 text-white px-6 py-2 rounded-full"
       >
         Next <span>➡️</span>
       </button>

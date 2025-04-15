@@ -29,8 +29,8 @@ const DriverRegistration = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0F0F1D] flex items-center justify-center px-4 py-6">
-      <div className="w-full max-w-md bg-[#1F1F2E] rounded-xl p-6 shadow-lg text-white space-y-4">
+    <div className="min-h-screen bg-[#2d2d2d] flex items-center justify-center">
+      <div className="bg-[#1F1F2E] rounded-2xl p-8 max-w-md w-full shadow-lg flex items-center justify-center">
         {step === 1 && (
           <DriverUserForm
             data={data}

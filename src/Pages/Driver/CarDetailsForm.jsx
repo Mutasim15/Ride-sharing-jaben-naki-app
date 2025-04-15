@@ -85,11 +85,11 @@ const CarDetailsForm = ({ data, setData, previousStep, resetStep }) => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <h2 className="text-xl font-semibold">Car Details</h2>
+      <h2 className="text-white text-2xl font-poppins font-semibold mb-4">Car Details</h2>
 
       <input
         placeholder="Enter car serial number"
-        className="w-full p-3 rounded bg-white text-black"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.carDetails.carSerialNo}
         onChange={(e) =>
           setData({
@@ -100,7 +100,7 @@ const CarDetailsForm = ({ data, setData, previousStep, resetStep }) => {
       />
       <input
         placeholder="Enter car category"
-        className="w-full p-3 rounded bg-white text-black"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.carDetails.category}
         onChange={(e) =>
           setData({
@@ -111,7 +111,7 @@ const CarDetailsForm = ({ data, setData, previousStep, resetStep }) => {
       />
       <input
         placeholder="Enter car image URL"
-        className="w-full p-3 rounded bg-white text-black"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.carDetails.carImg}
         onChange={(e) =>
           setData({
@@ -122,7 +122,7 @@ const CarDetailsForm = ({ data, setData, previousStep, resetStep }) => {
       />
       <input
         placeholder="Enter car color"
-        className="w-full p-3 rounded bg-white text-black"
+        className="w-[320px] px-4 py-2 rounded-[30px] border border-solid border-[#FFFFFF] text-[#FFFFFF] font-inter font-normal"
         value={data.carDetails.carColor}
         onChange={(e) =>
           setData({
@@ -148,7 +148,7 @@ const CarDetailsForm = ({ data, setData, previousStep, resetStep }) => {
           className="bg-green-500 text-white px-6 py-2 rounded-full"
           disabled={loading}
         >
-          {loading ? "Submitting..." : "Submit ✅"}
+          {loading ? "Submitting..." : "Sign UP "}
         </button>
       </div>
     </form>
