@@ -40,7 +40,7 @@ const UserForm = ({ data, setData, nextStep }) => {
 
       <button
         type="submit"
-        className="flex items-center gap-2 bg-[#7879F1] text-white px-4 py-2 rounded-full"
+        className="flex items-center justify-end ml-auto bg-[#7879F1] text-white px-6 py-2 rounded-full"
       >
         Next <span>➡️</span>
       </button>

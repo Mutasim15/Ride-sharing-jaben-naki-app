@@ -1,4 +1,3 @@
-// components/DriverRegistration/DriverRegistration.jsx
 import React, { useState } from "react";
 import DriverUserForm from "./DriverUserForm";
 import DriverDetailsForm from "./DriverDetailsForm";
@@ -25,19 +24,8 @@ const DriverRegistration = () => {
     }
   });
 
-  const handleFinalSubmit = () => {
-    const payload = {
-      user: {
-        email: data.email,
-        userName: data.userName,
-        password: data.password
-      },
-      driver: data.driver,
-      carDetails: data.carDetails
-    };
-
-    console.log("Submitting:", payload);
-    // Send payload to backend here
+  const resetStep = () => {
+    setStep(1);
   };
 
   return (
@@ -63,7 +51,7 @@ const DriverRegistration = () => {
             data={data}
             setData={setData}
             previousStep={() => setStep(2)}
-            handleSubmit={handleFinalSubmit}
+            resetStep={resetStep}
           />
         )}
       </div>
