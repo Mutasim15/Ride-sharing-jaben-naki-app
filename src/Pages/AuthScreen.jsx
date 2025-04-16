@@ -15,11 +15,11 @@ const AuthScreen = () => {
         {/* <div className="flex flex-col space-y-4"> */}
           <button
             onClick={() => navigate("/role-selection")}
-            className="bg-[#474973] text-white py-3 px-6 rounded-full w-full max-w-xs mb-4 hover:bg-[#2b2b5f] "
+            className="bg-[#474973] text-white text-base font-medium py-3 px-6 rounded-full w-full shadow-md max-w-xs mb-4 hover:bg-[#2b2b5f] "
           >
             Registration
           </button>
-          <button className="bg-white text-[#A1A1A1] py-3 px-6 rounded-full w-full max-w-xs">
+          <button className="bg-white text-[#787777] text-base font-medium py-3 px-6 rounded-full w-full max-w-xs">
             Log In
           </button>
         {/* </div> */}

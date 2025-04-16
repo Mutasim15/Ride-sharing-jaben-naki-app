@@ -18,7 +18,7 @@ const Home = () => {
         </h1>
 
         <p className="text-gray-300 text-sm text-center leading-relaxed mb-10">
-          Sell houses easily with the help of Listenoryx and to make this line big I am writing more.
+        "Need a ride? Book your car in seconds with our appfast ,reliable, and ready to roll whenever you are!"
         </p>
 
         <button
