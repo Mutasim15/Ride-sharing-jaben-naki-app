@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import auth from '../assets/Auth.png'
 const AuthScreen = () => {
   const navigate = useNavigate();
 
@@ -8,7 +8,7 @@ const AuthScreen = () => {
     <div className="min-h-screen bg-[#0F0F1D] flex flex-col items-center justify-center px-4">
       {/* <div className="w-full max-w-sm"> */}
         <img
-          src="/src/assets/Auth.png"
+          src={auth}
           alt="Welcome"
           className="w-full max-h-60 object-contain mb-10"
         />

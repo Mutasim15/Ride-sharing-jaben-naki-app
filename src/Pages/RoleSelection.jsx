@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import role from '../assets/role.png'
 const RoleSelection = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-[#0F0F1D] flex flex-col items-center justify-center px-4">
       <img
-        src="/src/assets/role.png"
+        src={role}
         alt="Select Role"
         className="w-full max-w-xs mb-10"
       />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import car from '../assets/CarBook.png'
 const Home = () => {
   const navigate = useNavigate();
 
@@ -8,7 +8,7 @@ const Home = () => {
     <div className="min-h-screen bg-[#0F0F1D] flex items-center justify-center">
       <div className="w-full max-w-sm px-6 py-10">
         <img
-          src="/src/assets/CarBook.png"
+          src={car}
           alt="Booking Illustration"
           className="w-full h-auto mb-8 object-contain"
         />
