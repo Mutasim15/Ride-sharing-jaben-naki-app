@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Swal from "sweetalert2";
 
 
+
 const PassengerForm = ({ data, setData, handleSubmit, handlePrevious }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -39,6 +40,7 @@ const PassengerForm = ({ data, setData, handleSubmit, handlePrevious }) => {
           showConfirmButton: false,
           timer: 1500
         });
+       
         handleSubmit();
       } else {
         setError(result?.message || "Something went wrong!");

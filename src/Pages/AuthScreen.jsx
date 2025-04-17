@@ -19,7 +19,9 @@ const AuthScreen = () => {
           >
             Registration
           </button>
-          <button className="bg-white text-[#787777] text-base font-medium py-3 px-6 rounded-full w-full max-w-xs">
+          <button
+          onClick={()=>navigate("/login")}
+           className="bg-white text-[#787777] text-base font-medium py-3 px-6 rounded-full w-full max-w-xs">
             Log In
           </button>
         {/* </div> */}

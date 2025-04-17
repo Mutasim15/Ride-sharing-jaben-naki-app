@@ -14,6 +14,10 @@ import RoleSelection from './Pages/RoleSelection';
 import PassengerRegistration from './Pages/Passenger/PassengerRegistration';
 import DriverRegistration from './Pages/Driver/DriverRegistration';
 
+import LoginPage from './Pages/PrivateRoute/LoginPage';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import Dashboard from './Pages/PrivateRoute/Dashboard';
+
 
 
 
@@ -37,6 +41,18 @@ const router = createBrowserRouter([
   {
     path:'/register/driver',
     element:<DriverRegistration></DriverRegistration>
+  },
+  
+  {
+    path: "/login",
+    element: <LoginPage></LoginPage>,
+  },
+  {
+    path:'/dashboard',
+    element:<PrivateRoute>
+      <Dashboard></Dashboard>
+    </PrivateRoute>
+    
   }
 ]);
 
