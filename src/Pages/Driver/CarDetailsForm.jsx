@@ -40,7 +40,7 @@ const CarDetailsForm = ({ data, setData, previousStep, resetStep }) => {
       });
 
       const result = await response.json();
-
+      console.log("API Raw Response:", result);
       if (!response.ok) {
         throw new Error(result?.message || "Something went wrong");
       }
@@ -76,7 +76,7 @@ const CarDetailsForm = ({ data, setData, previousStep, resetStep }) => {
       resetStep(); // Go back to Step 1
 
     } catch (err) {
-      console.error(err);
+      console.log(err);
       setError(err.message);
     } finally {
       setLoading(false);
