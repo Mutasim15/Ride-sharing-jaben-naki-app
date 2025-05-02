@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+import { baseUrl } from "../../utils/baseUrl";
 
 const CarDetailsForm = ({ data, setData, previousStep, resetStep }) => {
   const [loading, setLoading] = useState(false);
@@ -31,7 +32,7 @@ const CarDetailsForm = ({ data, setData, previousStep, resetStep }) => {
     };
 
     try {
-      const response = await fetch("https://jaben-naki-server.vercel.app/api/v1/user/create-driver", {
+      const response = await fetch(`${baseUrl}/user/create-driver`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

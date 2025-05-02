@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { baseUrl } from "../../utils/baseUrl";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const LoginPage = () => {
     };
 
     try {
-      const res = await fetch("https://jaben-naki-server.vercel.app/api/v1/auth/login", {
+      const res = await fetch(`${baseUrl}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,9 +30,12 @@ const LoginPage = () => {
 
       const result = await res.json();
 
+    
       if (res.ok) {
         // Save login state (token or flag)
-        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("token", result.payload.token);
+
+        const res = await fetch(`${baseUrl}/`)
 
         Swal.fire({
           icon: "success",

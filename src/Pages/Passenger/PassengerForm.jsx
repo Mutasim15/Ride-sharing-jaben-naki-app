@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+import { baseUrl } from "../../utils/baseUrl";
 
 
 
@@ -23,7 +24,7 @@ const PassengerForm = ({ data, setData, handleSubmit, handlePrevious }) => {
     setError("");
 
     try {
-      const response = await fetch("https://jaben-naki-server.vercel.app/api/v1/user/create-passenger", {
+      const response = await fetch(`${baseUrl}/user/create-passenger`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
