@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { baseUrl } from "../../utils/baseUrl";
+import { useNavigate } from "react-router-dom";
 
 
 
 const PassengerForm = ({ data, setData, handleSubmit, handlePrevious }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const { name, dateOfBirth, contactNumber } = data.passenger;
 
@@ -41,8 +43,10 @@ const PassengerForm = ({ data, setData, handleSubmit, handlePrevious }) => {
           showConfirmButton: false,
           timer: 1500
         });
+        
        
-        handleSubmit();
+        handleSubmit();   //to reset form
+        navigate('/login')
       } else {
         setError(result?.message || "Something went wrong!");
       }

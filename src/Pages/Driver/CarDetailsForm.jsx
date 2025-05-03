@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { baseUrl } from "../../utils/baseUrl";
+import { useNavigate } from "react-router-dom";
 
 const CarDetailsForm = ({ data, setData, previousStep, resetStep }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -75,6 +77,7 @@ const CarDetailsForm = ({ data, setData, previousStep, resetStep }) => {
         }
       });
       resetStep(); // Go back to Step 1
+      navigate('/login')
 
     } catch (err) {
       console.log(err);

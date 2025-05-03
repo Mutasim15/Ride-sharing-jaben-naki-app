@@ -14,37 +14,38 @@ const LoginPage = () => {
     e.preventDefault();
     setLoading(true);
 
-    const loginData = {
-      email,
-      password,
-    };
+    const loginData = { email, password };
 
     try {
       const res = await fetch(`${baseUrl}/auth/login`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData),
       });
 
       const result = await res.json();
 
-    
       if (res.ok) {
-        // Save login state (token or flag)
-        localStorage.setItem("token", result.payload.token);
+        const token = result.payload.token;
+        const role = result.payload.role;
 
-        const res = await fetch(`${baseUrl}/`)
+        localStorage.setItem("token", token);
 
+        // Set timeout to ensure Chrome completes SweetAlert rendering
         Swal.fire({
           icon: "success",
           title: "Successfully Logged In",
+          timer: 1000,
           showConfirmButton: false,
-          timer: 1500,
+        }).then(() => {
+          if (role === "passenger") {
+            navigate("/passenger-dashboard");
+          } else if (role === "driver") {
+            navigate("/driver-dashboard");
+          } else {
+            navigate("/dashboard");
+          }
         });
-
-        navigate("/dashboard"); // Go to private route
       } else {
         Swal.fire({
           icon: "error",
@@ -66,10 +67,14 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen bg-[#2d2d2d] flex items-center justify-center">
       <div className="bg-[#3a3a3a] rounded-2xl p-8 max-w-md w-full shadow-lg flex flex-col items-center justify-center">
-        <h2 className="text-white text-2xl font-poppins font-semibold mb-4">Login to Your Account</h2>
-        <form onSubmit={handleLogin} className="space-y-4">
+        <h2 className="text-white text-2xl font-poppins font-semibold mb-4">
+          Login to Your Account
+        </h2>
+        <form onSubmit={handleLogin} className="space-y-4" autoComplete="on">
           <input
             type="email"
+            name="email"
+            autoComplete="email"
             placeholder="Email"
             required
             value={email}
@@ -80,6 +85,8 @@ const LoginPage = () => {
           <div className="relative w-[320px]">
             <input
               type={showPassword ? "text" : "password"}
+              name="password"
+              autoComplete="current-password"
               placeholder="Password"
               required
               value={password}
