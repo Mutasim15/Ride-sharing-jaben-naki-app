@@ -25,11 +25,14 @@ const LoginPage = () => {
 
       const result = await res.json();
 
+      console.log(result)
+
       if (res.ok) {
         const token = result.payload.token;
-        const role = result.payload.role;
+        const role = result.payload.user.role;
 
-        localStorage.setItem("token", token);
+        localStorage.setItem("token", token)
+        localStorage.setItem("role", role);
 
         // Set timeout to ensure Chrome completes SweetAlert rendering
         Swal.fire({

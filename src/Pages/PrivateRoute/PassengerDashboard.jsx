@@ -2,7 +2,7 @@ import React from "react";
 import PassengerHome from "./Components/dashboard/PassengerHome";
 
 
-const Dashboard = () => {
+const PassengerDashBoard = () => {
 
 
 
@@ -13,4 +13,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default PassengerDashBoard;
