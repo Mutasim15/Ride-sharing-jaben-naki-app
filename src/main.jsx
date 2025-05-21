@@ -17,6 +17,7 @@ import DriverRegistration from './Pages/Driver/DriverRegistration';
 import LoginPage from './Pages/PrivateRoute/LoginPage';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import PassengerDashBoard from './Pages/PrivateRoute/PassengerDashboard.jsx';
+import DriverDashboard from './Pages/PrivateRoute/DriverDashboard';
 
 
 
@@ -52,6 +53,13 @@ const router = createBrowserRouter([
     path: "/passenger-dashboard",
     element: <PrivateRoute>
       <PassengerDashBoard />
+    </PrivateRoute>
+
+  },
+   {
+    path: "/driver-dashboard",
+    element: <PrivateRoute>
+      <DriverDashboard />
     </PrivateRoute>
 
   }

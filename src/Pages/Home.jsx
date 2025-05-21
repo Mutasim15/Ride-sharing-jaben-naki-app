@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import car from '../assets/CarBook.png'
+import { getToken } from '../utils/tokenUtils';
+import { baseUrl } from '../utils/baseUrl';
 const Home = () => {
   const navigate = useNavigate();
+  const token = getToken()
+  useEffect(()=>{
+      const fetchUser =async ()=> {
+        const res = await fetch(`${baseUrl}/user/me`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          credentials: 'include' 
+        });
+        const role = (await res.json())
+        console.log(role);
+      }
+    fetchUser()
+  },[])
 
   return (
     <div className="min-h-screen bg-[#0F0F1D] flex items-center justify-center">

@@ -8,9 +8,9 @@ const PassengerHome = () => {
   const [username, setUsername] = useState("User");
 
   useEffect(() => {
-    const storedUsername = localStorage.getItem("username");
-    if (storedUsername) {
-      setUsername(storedUsername);
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser) {
+      setUsername(storedUser.userName);
     }
   }, []);
 
